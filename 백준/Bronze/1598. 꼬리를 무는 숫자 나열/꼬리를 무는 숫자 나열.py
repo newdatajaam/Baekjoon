@@ -1,17 +1,8 @@
-num1, num2 = map(int,input().split())
+a, b = map(int, input().split())
 
-horizontal = 0
-vertical = 0
+dict = {a:((a-1)//4, (a-1)%4), b:((b-1)//4, (b-1)%4)}
 
-if num1%4 == 0 and num2%4 != 0:
-  horizontal = abs(((num1)//4-1) - (num2)//4)
-  vertical = abs(((num1)%4+4) - (num2)%4)
-elif num2%4 == 0 and num1%4 != 0:
-  horizontal = abs((num1)//4 - ((num2)//4-1))
-  vertical = abs((num1)%4 - ((num2)%4+4))
-else:
-  horizontal = abs((num1)//4 - (num2)//4)
-  vertical = abs((num1)%4 - (num2)%4)
+x = abs(dict[a][0] - dict[b][0])
+y = abs(dict[a][1] - dict[b][1])
 
-total = horizontal + vertical
-print(total)
+print(x+y)
