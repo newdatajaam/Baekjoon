@@ -13,6 +13,6 @@ for sosu in range(2,k):
   else:
     cnt += 1
 
-
-if cnt >= k:
+# k(=cnt)번 만큼 
+if cnt == k:
   print("GOOD")
