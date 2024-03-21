@@ -6,8 +6,8 @@ for _ in range(n):
     if len(present) == 0:
       print(-1)
     else:
-      res = present.pop(0)
-      print(res)
+     res = present.pop(0)
+     print(res)
   else:
     present.extend(a_list)
     present.sort(reverse=True)
