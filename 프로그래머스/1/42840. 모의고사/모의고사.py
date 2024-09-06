@@ -14,9 +14,10 @@ def solution(answers):
         if ans == stu3[((i+1)%(len(stu3)))-1]:
             scores[2] += 1
     
-    for j in range(len(scores)):
-        if scores[j] == max(scores):
-            answer.append(j+1)
+    mx_sc = max(scores)
+    for idx, j in enumerate(scores):
+        if j == mx_sc:
+            answer.append(idx+1)
     
     return answer
 
