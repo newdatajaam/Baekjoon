@@ -1,6 +1,5 @@
 def solution(numbers, target):
     answer = 0
-    cal = [1, -1]
     
     def dfs(idx, tot):
         nonlocal answer
